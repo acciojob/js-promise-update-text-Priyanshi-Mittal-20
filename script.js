@@ -1,13 +1,13 @@
 //your JS code here. If required.
 let item= document.getElementById("output")
-function update()
+function updateItem()
 {
-	return new Promise((resolve,reject)=>{
-		setTimeout((resolve,reject)=>{
-			Promise.resolve("Hello, world!")
+	return new Promise((resolve)=>{
+		setTimeout(()=>{
+			resolve("Hello, world!")
 		},1000)
 	})
 }
-update().then((data)=>{
+updateItem().then((data)=>{
 	item.innerText=data
 })
