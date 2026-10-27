@@ -2,9 +2,9 @@
 let item= document.getElementById("output")
 function update()
 {
-	return new Promise(()=>{
-		setTimeout(()=>{
-			resolve("Hello, world!")
+	return new Promise((resolve,reject)=>{
+		setTimeout((resolve,reject)=>{
+			Promise.resolve("Hello, world!")
 		},1000)
 	})
 }
